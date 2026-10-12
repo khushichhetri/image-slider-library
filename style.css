@@ -1,0 +1,521 @@
+/* General Settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1d2430;
+    background-color: #fdfaf5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #1d2430;
+    color: white;
+    text-align: center;
+    padding: 40px 0 25px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    margin: 10px 0 25px;
+}
+
+/* Navigation */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+    background-color: #b23a0e;
+}
+
+/* Sections */
+.section {
+    padding: 70px 0;
+    scroll-margin-top: 20px;
+}
+
+.section-light {
+    background-color: #f3ede4;
+}
+
+.section h2 {
+    text-align: center;
+    color: #7a3e12;
+    font-size: 2rem;
+    margin: 0 0 35px;
+}
+
+/* About Me */
+.about-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #7a3e12;
+    margin: 0 auto;
+}
+
+.about-text p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Technical Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #d6dce3;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card h3 {
+    color: #7a3e12;
+    margin-top: 0;
+}
+
+.skill-card p {
+    margin-bottom: 0;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #d6dce3;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    color: #7a3e12;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.project-type {
+    display: inline-block;
+    background-color: #f3ede4;
+    color: #7a3e12;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #b23a0e;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: #7a3e12;
+}
+
+.button:focus-visible {
+    outline: 3px solid #1c8a9c;
+    outline-offset: 3px;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* My Hobbies */
+.hobbies-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.gallery-title {
+    text-align: center;
+    color: #7a3e12;
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+}
+
+/* Image Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slider-viewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f3ede4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 450ms ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: clamp(230px, 50vw, 500px);
+    object-fit: cover;
+}
+
+/* Previous and Next Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(29, 36, 48, 0.85);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 200ms ease;
+}
+
+.slider-button:hover {
+    background-color: #b23a0e;
+}
+
+.slider-button:focus-visible {
+    outline: 3px solid #1c8a9c;
+    outline-offset: 3px;
+}
+
+.slider-button.previous {
+    left: 15px;
+}
+
+.slider-button.next {
+    right: 15px;
+}
+
+/* Dynamic Indicator Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 10px 8px;
+}
+
+.slider-dots button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #c9c2b8;
+    cursor: pointer;
+    transition: background-color 200ms ease,
+        transform 200ms ease;
+}
+
+.slider-dots button:hover {
+    background-color: #7a3e12;
+}
+
+.slider-dots button.active {
+    background-color: #b23a0e;
+    transform: scale(1.25);
+}
+
+.slider-dots button:focus-visible {
+    outline: 3px solid #1c8a9c;
+    outline-offset: 4px;
+}
+
+/* Image Counter */
+.slide-status {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #5c6773;
+    font-size: 0.9rem;
+}
+
+/* Contact Form */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #d6dce3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #7a3e12;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8bec5;
+    border-radius: 5px;
+    font: inherit;
+    background-color: #fdfaf5;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 3px solid #1c8a9c;
+    border-color: #1c8a9c;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #1d2430;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .slider-button {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .slider-button.previous {
+        left: 10px;
+    }
+
+    .slider-button.next {
+        right: 10px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    .site-header {
+        padding: 30px 0 20px;
+    }
+
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .profile-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skill-card,
+    .project-content {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .gallery-title {
+        font-size: 1.3rem;
+    }
+
+    .slider-viewport {
+        border-radius: 8px;
+    }
+
+    .slide img {
+        height: 260px;
+    }
+
+    .slider-button {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .slider-button.previous {
+        left: 7px;
+    }
+
+    .slider-button.next {
+        right: 7px;
+    }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .slider-track,
+    .slider-button,
+    .slider-dots button {
+        transition: none;
+    }
+}

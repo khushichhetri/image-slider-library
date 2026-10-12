@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Khushi Chhetri's personal portfolio featuring web design projects, skills, and trekking memories.">
+
+    <title>Khushi Chhetri - Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Khushi Chhetri - Personal Portfolio</h1>
+            <p class="tagline">
+                Student interested in Web Design and Software Development
+            </p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#hobbies">My Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- About Me -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+
+                <div class="about-content">
+                    <div class="profile-image">
+                        <img src="image.jpg" alt="Profile photo of Khushi Chhetri">
+                    </div>
+
+                    <div class="about-text">
+                        <p>
+                            Hello! I am a student interested in web design
+                            and software development. I enjoy learning how
+                            websites are created and how technology can be
+                            used to solve problems.
+                        </p>
+
+                        <p>
+                            I am learning HTML, CSS, and JavaScript to
+                            improve my skills and create useful,
+                            responsive websites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills" class="section section-light">
+            <div class="container">
+                <h2>Technical Skills</h2>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>HTML5</h3>
+                        <p>I use HTML to structure web pages and organize content.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Semantic HTML</h3>
+                        <p>I use meaningful HTML elements to create clear page structures.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Web Design</h3>
+                        <p>I am learning to create attractive and responsive websites.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>JavaScript</h3>
+                        <p>I use JavaScript to add interactive features to web pages.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>My Projects</h2>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="project-type">Web Application</span>
+                            <h3>ToyCycle</h3>
+                            <p>
+                                ToyCycle is a C2C marketplace project for
+                                buying, selling, and exchanging second-hand
+                                children's toys.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="project-type">HTML, CSS and JavaScript</span>
+                            <h3>Personal Portfolio</h3>
+                            <p>
+                                This website demonstrates my practice with
+                                web page structure, styling, responsive
+                                design, and interactive image sliders.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="github-link">
+                    <a class="button" href="https://github.com/khushichhetri/image-slider-library" target="_blank"
+                        rel="noopener noreferrer">
+                        Visit My GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Hobbies and Image Slider -->
+        <section id="hobbies" class="section section-light">
+            <div class="container">
+                <h2>My Hobbies</h2>
+
+                <div class="hobbies-intro">
+                    <p>
+                        In my free time, I enjoy trekking, hiking, and
+                        exploring nature. Trekking in Dhorpatan was a
+                        wonderful experience. I enjoyed the beautiful
+                        views, fresh air, and peaceful surroundings.
+                        I also enjoy taking photos to keep memories
+                        of the places I visit.
+                    </p>
+                </div>
+
+                <h3 class="gallery-title">
+                    My Trekking and Hiking Memories
+                </h3>
+
+                <div class="slider" role="region" aria-roledescription="carousel"
+                    aria-label="My trekking and hiking photo gallery">
+
+                    <div class="slider-viewport">
+                        <div class="slider-track">
+
+                            <!-- Slide 1 -->
+                            <div class="slide">
+                                <img src="images/uttarganga.jpg" alt="Uttarganga during my Dhorpatan trekking trip">
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="slide">
+                                <img src="images/dhorpatan-trekking.jpg" alt="Beautiful view during my trek">
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="slide">
+                                <img src="images/nature.jpg" alt="Beautiful natural scenery">
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="slide">
+                                <img src="images/dhorpatan-view.jpg" alt="My trekking experience in Dhorpatan">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="slider-button previous" type="button" aria-label="Previous image">
+                        &#10094;
+                    </button>
+
+                    <button class="slider-button next" type="button" aria-label="Next image">
+                        &#10095;
+                    </button>
+
+                    <div class="slider-dots" role="group" aria-label="Choose a photo">
+                    </div>
+
+                    <p class="slide-status" aria-live="polite" aria-atomic="true">
+                        Image 1 of 4
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Me</h2>
+
+                <p class="contact-intro">
+                    You can use the form below to get in touch with me.
+                </p>
+
+                <form class="contact-form" action="#contact" method="get">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message"
+                            required></textarea>
+                    </div>
+
+                    <button class="button" type="submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Khushi Chhetri. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
